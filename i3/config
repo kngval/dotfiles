@@ -9,7 +9,7 @@
 #
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 # Set the colors for focused windows
-# gaps outer 10
+ gaps outer 10
 exec_always --no-startup-id bash -c "pgrep -x polybar > /dev/null || polybar bar"
 exec --no-startup-id xcompmgr
 # Set a border for windows
