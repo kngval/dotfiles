@@ -34,6 +34,8 @@ for_window [class="Alacritty"] border pixel 2
 set $mod Mod1
 
 bindsym $mod+d exec rofi -show combi
+
+# WALLPAPER HERE
 exec --no-startup-id autorandr --change && feh --bg-scale /Downloads/wp10
 
 bindsym --release Print exec scrot -s '%Y-%m-%d-%H.%M.%S.png' -e 'mv $f ~/Pictures' 
