@@ -1,0 +1,17 @@
+[general]
+import=["~/.config/alacritty/rose-pine.toml"]
+# import=["~/.config/alacritty/cyberpunk.toml"]
+
+[terminal.shell]
+program = "/usr/bin/zsh"
+args = ["-l"]
+
+[font]
+normal = { family =  "JetBrainsMono Nerd Font", style="Regular" }
+bold = { family =  "JetBrainsMono Nerd Font", style="Bold" }
+italic = { family =  "JetBrainsMono Nerd Font", style="Italic" }
+size = 11.0
+[window]
+startup_mode="Maximized"
+opacity=1
+padding={ x=5, y=5 }
