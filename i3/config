@@ -16,6 +16,7 @@
 # gaps inner 5
 # gaps outer 10
 exec_always --no-startup-id bash -c "pgrep -x polybar > /dev/null || polybar bar"
+exec_always --no-startup-id "~/.config/polybar/cuts/launch.sh"
 # Set a border for windows
 new_window none
 # Set the colors for focused windows
@@ -35,18 +36,18 @@ client.urgent           #ffffff #ffffff #ffffff #ffffff #ffffff
 # client.focused_inactive #00000000
 # client.unfocused_inactive #00000000
 
-for_window [class="Alacritty"] border pixel 2
+# for_window [class="Alacritty"] border pixel 2
 
 # for_window [class="^.*"] border pixel 0
 # Keep titlebars for specific windows (like terminal or floating windows)
 
 set $mod Mod1
 
-bindsym $mod+d exec rofi -show combi
+bindsym $mod+d exec ~/.config/polybar/cuts/scripts/launcher.sh 
 
 # WALLPAPER HERE
 
-exec --no-startup-id autorandr --change && feh --bg-scale /home/wolfe/Downloads/wp9
+exec_always --no-startup-id feh --bg-scale /home/kngval/Downloads/wp2
 bindsym --release Print exec scrot -s '%Y-%m-%d-%H.%M.%S.png' -e 'mv $f ~/Pictures' 
 
 
@@ -230,5 +231,5 @@ bindsym $mod+r mode "resize"
 # bar {
 #         status_command i3status
 # }
-exec --no-startup-id picom 
+exec_always --no-startup-id picom 
 
